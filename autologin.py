@@ -49,9 +49,9 @@ def upload(url):
     gcren = subprocess.run(["git", "config", "--global", "credential.helper", "store"])
     gadd = subprocess.run(["git", "add","." ])
     gcom = subprocess.run(["git", "commit", "-m" + date])
-    # grm = subprocess.run(["git","remote","rm","origin"])
-    # gremote = subprocess.run(["git", "remote", "add", "origin", url])
-    # gpull = subprocess.run(["git","pull","origin","master","--allow-unrelated-histories"])
+    grm = subprocess.run(["git","remote","rm","origin"])
+    gremote = subprocess.run(["git", "remote", "add", "origin", url])
+    gpull = subprocess.run(["git","pull","origin","master","--allow-unrelated-histories"])
     gpush = subprocess.run(["git", "push", "-u", "origin", "master"])
 def main():
     target_name = input("请输入创建库的名字：")
