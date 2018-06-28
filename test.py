@@ -3,9 +3,9 @@ import subprocess
 import os
 
 
-def upload(path):
+def upload():
     date = datetime.datetime.today().isoformat()[0:10]
-    init = subprocess.run(["git", "init",path])
+    init = subprocess.run(["git", "init"])
     gcren = subprocess.run(["git", "config", "--global", "credential.helper", "store"])
     gadd = subprocess.run(["git", "add","." ])
     gcom = subprocess.run(["git", "commit", "-m" + date])
@@ -16,8 +16,7 @@ def upload(path):
 
 
 def main():
-    Path = input("请输入需要push的路径：")
-    upload(Path)
+    upload()
 
 
 if __name__ == '__main__':
