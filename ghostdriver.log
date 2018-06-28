@@ -1,0 +1,13 @@
+[INFO  - 2018-06-26T14:13:11.828Z] GhostDriver - Main - running on port 60687
+[INFO  - 2018-06-26T14:13:13.538Z] Session [10279de0-794b-11e8-bcc6-21c0e5e42e0d] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-06-26T14:13:13.539Z] Session [10279de0-794b-11e8-bcc6-21c0e5e42e0d] - page.customHeaders:  - {}
+[INFO  - 2018-06-26T14:13:13.539Z] Session [10279de0-794b-11e8-bcc6-21c0e5e42e0d] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-06-26T14:13:13.539Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 10279de0-794b-11e8-bcc6-21c0e5e42e0d
+[ERROR - 2018-06-26T14:13:16.840Z] Session [10279de0-794b-11e8-bcc6-21c0e5e42e0d] - page.onError - msg: ReferenceError: evaluating module github-rollup-frameworks-bootstrap: Can't find variable: Symbol
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-06-26T14:13:16.840Z] Session [10279de0-794b-11e8-bcc6-21c0e5e42e0d] - page.onError - stack:
+  (anonymous function) (https://assets-cdn.github.com/assets/frameworks-92b196ce6913906278278c620acece50.js:1)
+  define (https://assets-cdn.github.com/assets/frameworks-92b196ce6913906278278c620acece50.js:1)
+
+  phantomjs://platform/console++.js:263 in error
