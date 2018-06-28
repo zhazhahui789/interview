@@ -43,25 +43,21 @@ def create_repo(name):
     driver.quit()
     print(https)
     return https[0]
-# def push_repo(url):
-#     date = datetime.datetime.today().isoformat()[0:10]
-#     status = subprocess.run(["git", "status"])
-#     print(status)
-#     print('**********start git add.**********')
-#     gadd = subprocess.run(["git", "add", "."])
-#     print('**********git add done.**********')
-#     print('**********start git commit.**********')
-#     gcom = subprocess.run(["git", "commit", "-m" + date])
-#     print('**********git commit done.**********')
-#     gremote = subprocess.run(["git","remote","add","origin",url])
-#     print('**********start git push.**********')
-#     gpush = subprocess.run(["git", "push", "origin", "master"])
-#     print('**********git push done.**********')
+def upload(url):
+    date = datetime.datetime.today().isoformat()[0:10]
+    init = subprocess.run(["git", "init"])
+    gcren = subprocess.run(["git", "config", "--global", "credential.helper", "store"])
+    gadd = subprocess.run(["git", "add","." ])
+    gcom = subprocess.run(["git", "commit", "-m" + date])
+    # grm = subprocess.run(["git","remote","rm","origin"])
+    # gremote = subprocess.run(["git", "remote", "add", "origin", url])
+    # gpull = subprocess.run(["git","pull","origin","master","--allow-unrelated-histories"])
+    gpush = subprocess.run(["git", "push", "-u", "origin", "master"])
 def main():
     target_name = input("请输入创建库的名字：")
     target_url = create_repo(target_name)
-    # if target_url:
-    #     push_repo(target_url)
+    upload(target_url)
+
 
 
 if __name__ == '__main__':
